@@ -1,0 +1,39 @@
+:root {
+  /* Colors */
+  --primary-gradient-color: hsl(236, 72%, 79%);
+  --secondary-gradient-color: hsl(237, 63%, 64%);
+  --neutral-text-color-01: hsl(240, 78%, 98%);
+  --neutral-text-color-02: hsl(234, 14%, 74%);
+  --neutral-text-color-03: hsl(233, 13%, 49%);
+  --neutral-text-color-04: hsl(232, 13%, 33%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+img {
+  max-width: 100%
+}
+
+.attribution {
+  font-size: 11px; text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
