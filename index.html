@@ -8,38 +8,52 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="css/style.css">
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+  <title>Pricing component</title>
 </head>
 <body>
-
-  Our Pricing
-  Annually
-  Monthly
-
-  Basic
-  &dollar;19.99
-  &dollar;199.99
-  500 GB Storage
-  2 Users Allowed
-  Send up to 3 GB
-  Learn More
-
-  Professional
-  &dollar;24.99
-  &dollar;249.99
-  1 TB Storage
-  5 Users Allowed
-  Send up to 10 GB
-  Learn More
-
-  Master
-  &dollar;39.99
-  &dollar;399.99
-  2 TB Storage
-  10 Users Allowed
-  Send up to 20 GB
-  Learn More
-
+  <main class="pricing-container">
+    <section class="pricing__header section">
+      <div class="container">
+        <div class="title">Our Pricing</div>
+        <div class="toggle-container">
+          <p>Annually</p>
+          <input type="checkbox">
+          <p>Monthly</p>
+        </div>
+      </div>
+    </section>
+    <section class="pricing__content section">
+      <div class="container">
+        <article class="card">
+          <h2 class="card__title">Basic</h2>
+          <h3 class="card__price card__price--monthly">&dollar;19.99</h3>
+          <h3 class="card__price card__price--annually">&dollar;199.99</h3>
+          <p class="card__content">500 GB Storage</p>
+          <p class="card__content">2 Users Allowed</p>
+          <p class="card__content">Send up to 3 GB</p>
+          <a class="card__cta" href="#">Learn More</a>
+        </article>
+        <article class="card">
+          <h2 class="card__title">Professional</h2>
+          <h3 class="card__price card__price--monthly">&dollar;24.99</h3>
+          <h3 class="card__price card__price--annually">&dollar;249.99</h3>
+          <p class="card__content">1 TB Storage</p>
+          <p class="card__content">5 Users Allowed</p>
+          <p class="card__content">Send up to 10 GB</p>
+          <a class="card__cta" href="#">Learn More</a>
+        </article>
+        <article class="card">
+          <h2 class="card__title">Master</h2>
+          <h3 class="card__price card__price--monthly">&dollar;39.99</h3>
+          <h3 class="card__price card__price--annually">&dollar;399.99</h3>
+          <p class="card__content">2 TB Storage</p>
+          <p class="card__content">10 Users Allowed</p>
+          <p class="card__content">Send up to 20 GB</p>
+          <a class="card__cta" href="#">Learn More</a>
+        </article>
+      </div>
+    </section>
+  </main>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
