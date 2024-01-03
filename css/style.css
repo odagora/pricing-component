@@ -6,6 +6,8 @@
   --neutral-text-color-02: hsl(234, 14%, 74%);
   --neutral-text-color-03: hsl(233, 13%, 49%);
   --neutral-text-color-04: hsl(232, 13%, 33%);
+  --linear-gradient-to-left: linear-gradient(to left, var(--secondary-gradient-color), var(--primary-gradient-color));
+  --linear-gradient-to-top: linear-gradient(to top, var(--secondary-gradient-color), var(--primary-gradient-color));
 }
 
 * {
@@ -20,10 +22,11 @@ html {
 
 body {
   font-family: 'Montserrat', sans-serif;
-}
-
-p {
-  font-size: 1.5rem;
+  background-color: var(--neutral-text-color-01);
+  background-image: url('../images/bg-top.svg');
+  background-size: 300px 500px;
+  background-repeat: no-repeat;
+  background-position: right -150px top 0px;
 }
 
 img {
@@ -34,8 +37,28 @@ h1 {
   font-size: 3.2rem;
 }
 
-h1, p {
+h2 {
+  font-size: 1.8rem;
+}
+
+h1, h2, p, li {
   color: var(--neutral-text-color-03);
+}
+
+h3 {
+  color: var(--neutral-text-color-04);
+}
+
+p, li {
+  font-size: 1.5rem;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {
@@ -46,6 +69,16 @@ h1, p {
   justify-content: center;
   text-align: center;
   align-items: center;
+}
+
+.grid {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr))
+}
+
+.pricing-container {
+  min-width: 375px;
 }
 
 .pricing__header {
@@ -90,7 +123,7 @@ h1, p {
     left: 0;
     right: 0;
     border-radius: 30px;
-    background-color: var(--primary-gradient-color);
+    background: var(--linear-gradient-to-left);
     cursor: pointer;
 
     &::before {
@@ -106,6 +139,67 @@ h1, p {
       transition: transform 0.5s;
     }
   }
+}
+
+.pricing__content {
+  padding: 3.5em 0;
+}
+
+.card {
+  padding: 4em 3em;
+  width: 330px;
+  border-radius: 10px;
+  margin-bottom: 2em;
+  background: #fff;
+}
+
+.card--primary {
+  background: var(--linear-gradient-to-top);
+  & h2, h3, li {
+    color: #fff;
+  }
+  & a {
+    background: #fff;
+    color: var(--primary-gradient-color);
+  }
+}
+
+.card__price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em 0;
+  font-size: 4rem;
+  & .price {
+    font-size: 7rem;
+  }
+}
+
+.card__price--monthly {
+  display: none;
+}
+
+.card__content {
+  padding: 0 0 3em;
+}
+
+.card__feature:last-child {
+  border-bottom: 1px solid var(--neutral-text-color-01);
+}
+
+.card__feature {
+  padding: 1.1em 0;
+  border-top: 1px solid var(--neutral-text-color-01);
+}
+
+.card__cta {
+  padding: 1em;
+  display: block;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--linear-gradient-to-left);
+  border-radius: 5px;
 }
 
 .attribution {
