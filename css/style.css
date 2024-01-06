@@ -177,7 +177,7 @@ a {
   }
 }
 
-[class*="monthly"] {
+.hidden {
   display: none;
 }
 
