@@ -177,7 +177,7 @@ a {
   }
 }
 
-.card__price--monthly {
+[class*="monthly"] {
   display: none;
 }
 
