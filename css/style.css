@@ -79,6 +79,17 @@ a {
 
 .pricing-container {
   min-width: 375px;
+
+  &:has(.toggle-button input:checked) {
+
+    & .card__price--annually {
+      display: none;
+    }
+
+    & .card__price--monthly {
+      display: flex;
+    }
+  }
 }
 
 .pricing__header {
@@ -177,7 +188,7 @@ a {
   }
 }
 
-.hidden {
+.card__price--monthly {
   display: none;
 }
 
