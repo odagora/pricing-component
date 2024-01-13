@@ -21,6 +21,10 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
   font-family: 'Montserrat', sans-serif;
   background-color: var(--neutral-text-color-01);
   background-image: url('../images/bg-top.svg');
